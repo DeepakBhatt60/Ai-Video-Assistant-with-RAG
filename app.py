@@ -18,144 +18,143 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-    /* Main background */
-    .stApp {
-        background:
-            radial-gradient(circle at 10% 10%, rgba(99,102,241,0.15), transparent 30%),
-            radial-gradient(circle at 90% 20%, rgba(168,85,247,0.12), transparent 30%),
-            #0b0f19;
-        color: #f8fafc;
-    }
+.stApp {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(99,102,241,0.15), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(168,85,247,0.12), transparent 30%),
+        #0b0f19;
+    color: #f8fafc;
+}
 
-    /* Hide Streamlit default */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
 
-    /* Main container */
-    .block-container {
-        max-width: 1200px;
-        padding-top: 2rem;
-        padding-bottom: 3rem;
-    }
+.block-container {
+    max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
 
-    /* Hero */
-    .hero {
-        padding: 35px 40px;
-        border-radius: 24px;
-        background:
-            linear-gradient(135deg,
-                rgba(30,41,59,0.95),
-                rgba(17,24,39,0.92));
-        border: 1px solid rgba(148,163,184,0.15);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-        margin-bottom: 30px;
-    }
+/* Hero */
+.hero {
+    padding: 35px 40px;
+    border-radius: 24px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30,41,59,0.95),
+            rgba(17,24,39,0.92)
+        );
+    border: 1px solid rgba(148,163,184,0.15);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    margin-bottom: 30px;
+}
 
-    .hero-title {
-        font-size: 42px;
-        font-weight: 800;
-        margin-bottom: 8px;
-        background: linear-gradient(90deg,#a78bfa,#60a5fa);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg,#a78bfa,#60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    .hero-subtitle {
-        color: #94a3b8;
-        font-size: 17px;
-    }
+.hero-subtitle {
+    color: #94a3b8;
+    font-size: 17px;
+}
 
-    /* Cards */
-    .card {
-        background: rgba(15,23,42,0.75);
-        border: 1px solid rgba(148,163,184,0.12);
-        border-radius: 18px;
-        padding: 24px;
-        margin-bottom: 18px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-    }
+/* Cards */
+.card {
+    background: rgba(15,23,42,0.75);
+    border: 1px solid rgba(148,163,184,0.12);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
 
-    .card-title {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 12px;
-    }
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
 
-    /* Stats */
-    .stat-card {
-        background: rgba(30,41,59,0.7);
-        border: 1px solid rgba(148,163,184,0.12);
-        border-radius: 16px;
-        padding: 20px;
-        text-align: center;
-    }
+/* Stats */
+.stat-card {
+    background: rgba(30,41,59,0.7);
+    border: 1px solid rgba(148,163,184,0.12);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+}
 
-    .stat-number {
-        font-size: 26px;
-        font-weight: 800;
-        color: #a78bfa;
-    }
+.stat-number {
+    font-size: 26px;
+    font-weight: 800;
+    color: #a78bfa;
+}
 
-    .stat-label {
-        color: #94a3b8;
-        font-size: 13px;
-    }
+.stat-label {
+    color: #94a3b8;
+    font-size: 13px;
+}
 
-    /* Input */
-    .stTextInput > div > div > input {
-        background: #111827;
-        color: white;
-        border: 1px solid #334155;
-        border-radius: 12px;
-        padding: 14px;
-    }
+/* Input */
+.stTextInput > div > div > input {
+    background: #111827;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 14px;
+}
 
-    /* Select */
-    .stSelectbox > div > div {
-        background: #111827;
-        border-radius: 12px;
-    }
+/* Select */
+.stSelectbox > div > div {
+    background: #111827;
+    border-radius: 12px;
+}
 
-    /* Button */
-    .stButton > button {
-        width: 100%;
-        border-radius: 12px;
-        border: none;
-        padding: 12px 20px;
-        font-weight: 700;
-        font-size: 16px;
-        background: linear-gradient(90deg,#7c3aed,#4f46e5);
-        color: white;
-        transition: 0.2s;
-    }
+/* Button */
+.stButton > button {
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(90deg,#7c3aed,#4f46e5);
+    color: white;
+    transition: 0.2s;
+}
 
-    .stButton > button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px rgba(99,102,241,0.35);
-    }
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(99,102,241,0.35);
+}
 
-    /* Tabs */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        background: transparent;
-    }
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background: transparent;
+}
 
-    .stTabs [data-baseweb="tab"] {
-        border-radius: 10px;
-        padding: 10px 18px;
-    }
+.stTabs [data-baseweb="tab"] {
+    border-radius: 10px;
+    padding: 10px 18px;
+}
 
-    /* Divider */
-    hr {
-        border-color: rgba(148,163,184,0.12);
-    }
+/* Divider */
+hr {
+    border-color: rgba(148,163,184,0.12);
+}
 
-    /* Sidebar */
-    section[data-testid="stSidebar"] {
-        background: #080c14;
-        border-right: 1px solid rgba(148,163,184,0.12);
-    }
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #080c14;
+    border-right: 1px solid rgba(148,163,184,0.12);
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -182,13 +181,18 @@ with st.sidebar:
     st.markdown("### 🧠 Pipeline")
 
     st.markdown("""
-    **01** 🎬 Video Input  
-    **02** 🎧 Audio Extraction  
-    **03** 📝 Whisper Transcription  
-    **04** 🧠 AI Analysis  
-    **05** 🔎 Vector Search  
-    **06** 💬 RAG Chat
-    """)
+**01** 🎬 Video Input
+
+**02** 🎧 Audio Extraction
+
+**03** 📝 Whisper Transcription
+
+**04** 🧠 AI Analysis
+
+**05** 🔎 Vector Search
+
+**06** 💬 RAG Chat
+""")
 
     st.markdown("---")
 
@@ -200,16 +204,13 @@ with st.sidebar:
 # -----------------------------
 st.markdown("""
 <div class="hero">
-
-    <div class="hero-title">
-        🎥 AI Video Assistant
-    </div>
-
-    <div class="hero-subtitle">
-        Turn long videos into intelligent summaries, decisions,
-        action items and an interactive AI conversation.
-    </div>
-
+<div class="hero-title">
+🎥 AI Video Assistant
+</div>
+<div class="hero-subtitle">
+Turn long videos into intelligent summaries, decisions,
+action items and an interactive AI conversation.
+</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -258,9 +259,13 @@ if process_button:
             result = run_pipeline(source, language)
 
             progress.progress(100)
+
             status.success("✅ Video analysis completed!")
 
             st.session_state["result"] = result
+
+            # Reset chat for new video
+            st.session_state["messages"] = []
 
         except Exception as e:
 
@@ -279,45 +284,55 @@ if "result" in st.session_state:
 
     st.divider()
 
-    # Title
+    # -----------------------------
+    # Video Title
+    # -----------------------------
     st.markdown(
         f"""
-        <div class="card">
-            <div class="card-title">📌 Video Title</div>
-            <h2>{result['title']}</h2>
-        </div>
-        """,
+<div class="card">
+<div class="card-title">📌 Video Title</div>
+<h2>{result['title']}</h2>
+</div>
+""",
         unsafe_allow_html=True
     )
 
+
+    # -----------------------------
     # Stats
+    # -----------------------------
     col1, col2, col3 = st.columns(3)
 
     with col1:
+
         st.markdown("""
-        <div class="stat-card">
-            <div class="stat-number">📝</div>
-            <div class="stat-label">Transcript Generated</div>
-        </div>
-        """, unsafe_allow_html=True)
+<div class="stat-card">
+<div class="stat-number">📝</div>
+<div class="stat-label">Transcript Generated</div>
+</div>
+""", unsafe_allow_html=True)
 
     with col2:
+
         st.markdown("""
-        <div class="stat-card">
-            <div class="stat-number">🧠</div>
-            <div class="stat-label">AI Analysis</div>
-        </div>
-        """, unsafe_allow_html=True)
+<div class="stat-card">
+<div class="stat-number">🧠</div>
+<div class="stat-label">AI Analysis</div>
+</div>
+""", unsafe_allow_html=True)
 
     with col3:
+
         st.markdown("""
-        <div class="stat-card">
-            <div class="stat-number">💬</div>
-            <div class="stat-label">RAG Chat Ready</div>
-        </div>
-        """, unsafe_allow_html=True)
+<div class="stat-card">
+<div class="stat-number">💬</div>
+<div class="stat-label">RAG Chat Ready</div>
+</div>
+""", unsafe_allow_html=True)
+
 
     st.markdown("")
+
 
     # -----------------------------
     # Tabs
@@ -330,26 +345,50 @@ if "result" in st.session_state:
         "📄 Transcript"
     ])
 
+
+    # -----------------------------
+    # Summary
+    # -----------------------------
     with tab1:
 
         st.markdown("### 📋 AI Summary")
+
         st.markdown(result["summary"])
 
+
+    # -----------------------------
+    # Action Items
+    # -----------------------------
     with tab2:
 
         st.markdown("### ✅ Action Items")
+
         st.markdown(result["action_items"])
 
+
+    # -----------------------------
+    # Key Decisions
+    # -----------------------------
     with tab3:
 
         st.markdown("### 🔑 Key Decisions")
+
         st.markdown(result["key_decisions"])
 
+
+    # -----------------------------
+    # Open Questions
+    # -----------------------------
     with tab4:
 
         st.markdown("### ❓ Open Questions")
+
         st.markdown(result["open_questions"])
 
+
+    # -----------------------------
+    # Transcript
+    # -----------------------------
     with tab5:
 
         st.markdown("### 📄 Full Transcript")
@@ -360,6 +399,7 @@ if "result" in st.session_state:
             height=500,
             label_visibility="collapsed"
         )
+
 
     # -----------------------------
     # RAG Chat
@@ -372,28 +412,40 @@ if "result" in st.session_state:
         "Ask questions about the video and get answers from the transcript."
     )
 
+
     if "messages" not in st.session_state:
+
         st.session_state.messages = []
 
+
+    # Display previous messages
     for message in st.session_state.messages:
 
         with st.chat_message(message["role"]):
+
             st.markdown(message["content"])
 
+
+    # Chat input
     question = st.chat_input(
         "Ask something about this video..."
     )
 
+
     if question:
 
+        # User message
         st.session_state.messages.append({
             "role": "user",
             "content": question
         })
 
         with st.chat_message("user"):
+
             st.markdown(question)
 
+
+        # Assistant response
         with st.chat_message("assistant"):
 
             with st.spinner("🧠 Thinking..."):
@@ -405,6 +457,8 @@ if "result" in st.session_state:
 
             st.markdown(answer)
 
+
+        # Save assistant message
         st.session_state.messages.append({
             "role": "assistant",
             "content": answer
